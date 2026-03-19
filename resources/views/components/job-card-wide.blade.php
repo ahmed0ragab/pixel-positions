@@ -1,24 +1,48 @@
- <div class="p-4 bg-white/5 flex flex-col rounded-xl text-center ">
+ <div class="p-4 bg-white/5 flex  rounded-xl text-center ">
+    {{-- left div --}}
+     <div>
+         <a href="#">
+            <x-employer-logo/>
+         </a>
+     </div>
 
-     <div class="self-start text-sm">laracasts</div>
+     {{-- middle div --}}
+     <div class="flex-1 flex flex-col items-start pl-2 justify-between">
+         <div>
+             <p class="text-gray-400 text-xs">GovExec</p>
+         </div>
+         <div class="font-bold mt-3">
+             <h3>video producer<h3>
+
+         </div>
+         <div class="mt-auto text-xs text-gray-400">
+             <p>full time from $60000</p>
+
+         </div>
+     </div>
+     {{-- right div --}}
+     <div class="flex flex-col justify-between">
+         <div>
+             <x-tag>utag</x-tag>
+             <x-tag>utag</x-tag>
+         </div>
+         <div>
+             <x-tag>ltag</x-tag>
+             <x-tag>ltag</x-tag>
+             <x-tag>ltag</x-tag>
+         </div>
+     </div>
+
+ </div>
+
+
+ {{-- <div class="self-start text-sm">laracasts</div>
      <div class="py-8 font-bold">
          <h3>video producer</h3>
          <p>full time from $60000</p>
      </div>
      <div class="flex justify-between items-center mt-auto">
          <div class="flex flex-wrap gap-2">
-            <x-tag>frontend</x-tag>
-            <x-tag>backend</x-tag>
-            <x-tag>fullstack</x-tag>
-             {{-- <a href="" class="bg-white/10 py-1 px-2 rounded-xl self-center hover:bg-white/25 transition-colors duration-300  ">tag</a> --}}
-             {{-- <a href="" class="bg-white/10 py-2 px-3 rounded-xl self-center">tag</a>
-             <a href="" class="bg-white/10 py-2 px-3 rounded-xl self-center">tag</a> --}}
-             {{-- <a href="" class="bg-white/10 py-2 px-3 rounded-xl self-center">tag</a> --}}
-
+            tags goes here
          </div>
-
-
-         <img src="https://picsum.photos/42/42" alt="">
-     </div>
-
- </div>
+     </div> --}}

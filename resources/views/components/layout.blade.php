@@ -16,7 +16,6 @@
 
     <div class="px-10">
 
-
         <nav x-data="{ open: false }" class="relative flex justify-between items-center py-4 border-b border-white/10">
 
             <!-- logo -->
@@ -108,7 +107,7 @@
             </div>
         </nav>
 
-        <main class="mt-10 max-w-5xl mx-auto ">
+        <main class="mt-10 max-w-4xl mx-auto ">
             {{ $slot }}
         </main>
     </div>
