@@ -11,4 +11,12 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 
         --font-hanken: 'Hanken Grotesk', sans-serif;
+
+        --color-semiBlack: #060606;
+
+        /* 10/16= .625 rem */
+        --text-2xs: 0.625 rem;
+
+
+
 }
