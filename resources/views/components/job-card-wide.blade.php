@@ -1,8 +1,8 @@
- <div class="p-4 bg-white/5 flex  rounded-xl text-center ">
+ <div class="p-4 bg-white/5 flex  rounded-xl text-center border border-transparent hover:border-amber-200 hover:border  transition-colors duration-300  group">
     {{-- left div --}}
      <div>
          <a href="#">
-            <x-employer-logo/>
+            <x-employer-logo :width="90"/>
          </a>
      </div>
 
@@ -11,7 +11,7 @@
          <div>
              <p class="text-gray-400 text-xs">GovExec</p>
          </div>
-         <div class="font-bold mt-3">
+         <div class="font-bold mt-3 group-hover:text-amber-200 transition-colors duration-300">
              <h3>video producer<h3>
 
          </div>
@@ -36,13 +36,3 @@
  </div>
 
 
- {{-- <div class="self-start text-sm">laracasts</div>
-     <div class="py-8 font-bold">
-         <h3>video producer</h3>
-         <p>full time from $60000</p>
-     </div>
-     <div class="flex justify-between items-center mt-auto">
-         <div class="flex flex-wrap gap-2">
-            tags goes here
-         </div>
-     </div> --}}

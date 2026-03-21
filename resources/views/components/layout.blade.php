@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
 
-<body class="bg-semiBlack text-white ">
+<body class="bg-semiBlack text-white font-hanken ">
 
 
 
@@ -27,10 +27,10 @@
 
             <!-- desktop menu -->
             <div class="hidden sm:flex space-x-8 font-bold">
-                <a href="#">job</a>
-                <a href="#">career</a>
-                <a href="#">salaries</a>
-                <a href="#">companies</a>
+                <a href="#" class="hover:text-amber-200">job</a>
+                <a href="#" class="hover:text-amber-200">career</a>
+                <a href="#" class="hover:text-amber-200">salaries</a>
+                <a href="#" class="hover:text-amber-200">companies</a>
             </div>
 
             <!-- right -->
@@ -39,7 +39,7 @@
             </div>
 
             <!-- hamburger button -->
-            <button @click="open = !open" class="sm:hidden">
+            <button @click="open = !open" class="sm:hidden hover:text-amber-200">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -52,7 +52,7 @@
             <div class=" opacity-100 p-5  sm:hidden  flex flex-col gap-4 absolute left-0 right-0 w-full top-full  bg-black rounded-xl "
                 x-show="open">
 
-                <div class="space-x-2 flex items-center">
+                <div class="space-x-2 flex items-center hover:text-amber-200">
                     <button class="inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -65,7 +65,7 @@
                     <a href="#">home </a>
 
                 </div>
-                <div class="space-x-2 flex items-center">
+                <div class="space-x-2 flex items-center hover:text-amber-200">
                     <button class="inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -78,7 +78,7 @@
                     <a href="#">Job </a>
 
                 </div>
-                <div class="space-x-2 flex items-center">
+                <div class="space-x-2 flex items-center hover:text-amber-200">
                     <button class="inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
@@ -91,7 +91,7 @@
                     <a href="#">career </a>
 
                 </div>
-                <div class="space-x-2 flex items-center">
+                <div class="space-x-2 flex items-center hover:text-amber-200">
                     <button class="inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="size-6">
