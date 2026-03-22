@@ -20,7 +20,7 @@
 
             <!-- logo -->
             <div>
-                <a href="">
+                <a href="/">
                     <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="">
                 </a>
             </div>
@@ -107,7 +107,7 @@
             </div>
         </nav>
 
-        <main class="mt-10 max-w-4xl mx-auto ">
+        <main class="mt-10 max-w-5xl mx-auto ">
             {{ $slot }}
         </main>
     </div>
