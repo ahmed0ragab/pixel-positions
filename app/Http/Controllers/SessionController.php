@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Password;
+
+use function Laravel\Prompts\password;
 
 class SessionController extends Controller
 {
@@ -27,7 +31,23 @@ class SessionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // more strict rules password::min(3)->numbers()->symbols(),
+
+        $credentials = $request->validate([
+            'email' => 'required|email|string',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect('/jobs');
+
+        }
+
+
+        return redirect('/login')->withErrors([
+            'email'=>'the email credential incorrect',
+        ]);
     }
 
     /**
