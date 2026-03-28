@@ -34,9 +34,26 @@
             </div>
 
             <!-- right -->
-            <div class="hidden sm:block">
-                <a href="#">post a job</a>
-            </div>
+            @auth
+
+
+
+                <form action="/logout" method="post">
+                    @csrf
+
+                    <button type="submit">logout</button>
+                </form>
+            @endauth
+
+            @guest
+                <div class="hidden sm:block md:flex md:gap-5">
+                    <a href="/login">Login</a>
+                    <a href="/register">register</a>
+                </div>
+            @endguest
+
+
+
 
             <!-- hamburger button -->
             <button @click="open = !open" class="sm:hidden hover:text-amber-200">
