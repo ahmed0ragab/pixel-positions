@@ -6,7 +6,10 @@
 
      <div class="self-start text-sm">{{ $job->employer->name }}</div>
      <div class="py-8  ">
-         <h3 class="font-bold text-2xl group-hover:text-amber-200 transition-colors duration-300">{{ $job->title }}</h3>
+        <a href="{{ $job->url }}">
+
+            <h3 class="font-bold text-2xl group-hover:text-amber-200 transition-colors duration-300">{{ $job->title }}</h3>
+        </a>
          <p class="text-sm mt-4">{{ $job->time_of_work }} from {{ $job->salary }} $</p>
      </div>
      <div class="flex justify-between items-center mt-auto">

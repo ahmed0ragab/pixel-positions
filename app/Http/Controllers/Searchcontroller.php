@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Job;
 
 
-class Searchcontroller extends Controller
+class SearchController extends Controller
 {
     public function __invoke()
     {
