@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('location');
             $table->enum('time_of_work',['fulltime','parttime']);
             $table->string('url');//url to company site which contain all details about the job
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
         });

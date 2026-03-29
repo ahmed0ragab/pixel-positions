@@ -27,7 +27,7 @@
 
             <!-- desktop menu -->
             <div class="hidden sm:flex space-x-8 font-bold">
-                <a href="#" class="hover:text-amber-200">job</a>
+                <a href="#" class="hover:text-amber-200">jobs</a>
                 <a href="#" class="hover:text-amber-200">career</a>
                 <a href="#" class="hover:text-amber-200">salaries</a>
                 <a href="#" class="hover:text-amber-200">companies</a>
@@ -36,13 +36,18 @@
             <!-- right -->
             @auth
 
+                <div class="flex gap-2  items-center ">
+
+                    <form action="/logout" method="post">
+                        @csrf
+
+                        <button  class="bg-blue-800 rounded py-2 px-6 font-bold" type="submit">logout</button>
+                    </form>
+                    <a href="/jobs/create" class="bg-blue-800 rounded py-2 px-6 font-bold">create job</a>
+                </div>
 
 
-                <form action="/logout" method="post">
-                    @csrf
 
-                    <button type="submit">logout</button>
-                </form>
             @endauth
 
             @guest

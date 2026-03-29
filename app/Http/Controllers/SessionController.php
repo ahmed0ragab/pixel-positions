@@ -8,35 +8,26 @@ use Illuminate\Validation\Rules\Password;
 
 use function Laravel\Prompts\password;
 
+
+// our all auth system depends on Auth facade
 class SessionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('auth.login');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         // more strict rules password::min(3)->numbers()->symbols(),
 
         $credentials = $request->validate([
-            'email' => 'required|email|string',
+            'email' => 'required|email|string', //here put the same names in blade
             'password' => 'required'
         ]);
+
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
@@ -50,33 +41,7 @@ class SessionController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
   public function logout(Request $request)
 {
     Auth::logout();
@@ -87,3 +52,14 @@ class SessionController extends Controller
     return redirect('/login');
 }
 }
+
+
+
+// every thing depends on Auth facade
+
+// register user
+// (Auth::login())
+//log user out
+// (Auth::logout())
+//login user 
+// (Auth::attempt())
