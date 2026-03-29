@@ -4,7 +4,7 @@ A job board web application built with Laravel where employers can post
 jobs and candidates can search and filter by tags.
 
 Tech stack (tall stack)
-**Laravel 112.53.0** — PHP Framework
+**Laravel 12.53.0** — PHP Framework
 **SQLite ** — Database 
 **Tailwind CSS** — Styling
 **Alpine.js** — Mobile menu interactions
