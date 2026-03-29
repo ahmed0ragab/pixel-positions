@@ -31,7 +31,7 @@ class SessionController extends Controller
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect('/jobs');
+            return redirect('/');
 
         }
 
@@ -61,5 +61,5 @@ class SessionController extends Controller
 // (Auth::login())
 //log user out
 // (Auth::logout())
-//login user 
+//login user
 // (Auth::attempt())

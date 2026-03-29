@@ -2,33 +2,35 @@
 
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\Searchcontroller;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::middleware("auth")->group(function () {
-    Route::get('/', [JobController::class, 'index']);
-    Route::get('/jobs/create', [JobController::class, 'create']);
-    Route::Post('/jobs', [JobController::class, 'store']);
-    Route::post('/logout', [SessionController::class, 'logout']);
+    Route::GET('/', [JobController::class, 'index']);
+    Route::GET('/search', Searchcontroller::class);
+    Route::GET('/jobs/create', [JobController::class, 'create']);
+    Route::POST('/jobs', [JobController::class, 'store']);
+    Route::DELETE('/logout', [SessionController::class, 'logout']);
 });
 
 
 Route::middleware("guest")->group(function () {
 
-    Route::get('/register', [RegisteredUserController::class, 'create']);
-    Route::post('/register', [RegisteredUserController::class, 'store']);
+    Route::GET('/register', [RegisteredUserController::class, 'create']);
+    Route::POST('/register', [RegisteredUserController::class, 'store']);
 
-    Route::get('/login', [SessionController::class, 'create'])->name('login');
-    Route::post('/login', [SessionController::class, 'store']);
+    Route::GET('/login', [SessionController::class, 'create'])->name('login');
+    Route::POST('/login', [SessionController::class, 'store']);
 });
 
 
-Route::get('/label',function(){
+Route::GET('/label',function(){
     return view('components.trial.label');
 });
 
-Route::get('/input',function(){
+Route::GET('/input',function(){
     return view('components.trial.input');
 });

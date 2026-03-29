@@ -3,11 +3,19 @@
     <div class="space-y-10 mb-10">
         <section class="text-center pt-10">
             <h3 class="text-4xl">Let's Find You A Great Job</h3>
+
+{{-- 
             <form action="#" class="mt-8">
                 <input type="text"
                     class="bg-white/5 w-full max-w-xl py-3 px-5 border border-transparent rounded-lg hover:border-amber-200"
                     placeholder="backend developer...">
-            </form>
+            </form> --}}
+
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input :label="false" name="q" placeholder="web developer"  />
+            </x-forms.form>
+
+
         </section>
         <section class="pt-10">
             <x-section-heading>Featured jobs</x-section-heading>

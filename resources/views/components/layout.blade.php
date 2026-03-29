@@ -27,10 +27,10 @@
 
             <!-- desktop menu -->
             <div class="hidden sm:flex space-x-8 font-bold">
-                <a href="#" class="hover:text-amber-200">jobs</a>
-                <a href="#" class="hover:text-amber-200">career</a>
-                <a href="#" class="hover:text-amber-200">salaries</a>
-                <a href="#" class="hover:text-amber-200">companies</a>
+                <a href="/" class="hover:text-amber-200">Jobs</a>
+                <a href="#" class="hover:text-amber-200">Career</a>
+                <a href="#" class="hover:text-amber-200">Salaries</a>
+                <a href="#" class="hover:text-amber-200">Companies</a>
             </div>
 
             <!-- right -->
@@ -40,20 +40,18 @@
 
                     <form action="/logout" method="post">
                         @csrf
-
-                        <button  class="bg-blue-800 rounded py-2 px-6 font-bold" type="submit">logout</button>
+                        @method('DELETE')
+                        <button  class="bg-blue-800 rounded py-2 px-6 font-bold" type="submit">Logout</button>
                     </form>
-                    <a href="/jobs/create" class="bg-blue-800 rounded py-2 px-6 font-bold">create job</a>
+
+                    <a href="/jobs/create" class="bg-blue-800 rounded py-2 px-6 font-bold">Post a Job</a>
                 </div>
-
-
-
             @endauth
 
             @guest
                 <div class="hidden sm:block md:flex md:gap-5">
-                    <a href="/login">Login</a>
-                    <a href="/register">register</a>
+                    <a href="/login">Sign In</a>
+                    <a href="/register">Sign Up</a>
                 </div>
             @endguest
 
