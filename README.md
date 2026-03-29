@@ -33,7 +33,7 @@ Installation
 
 **
 1. Clone the repository
-   git clone https://github.com/yourusername/pixel-positions.git
+   git clone https://github.com/ahmed0ragab/pixel-positions.git
 
 2. Install dependencies
    composer install
