@@ -25,8 +25,11 @@ Features
   Screenshots
 
   <img width="1359" height="463" alt="image" src="https://github.com/user-attachments/assets/60333054-3f43-420b-aa50-1fbb38442fc7" />
+  
   <img width="1397" height="494" alt="image" src="https://github.com/user-attachments/assets/f0657ad4-71e8-4dfc-8c26-2578bd16644c" />
+  
   <img width="1342" height="565" alt="image" src="https://github.com/user-attachments/assets/57cd33a9-3ee7-4ee4-a047-72c9d82077f4" />
+  
   <img width="1354" height="599" alt="image" src="https://github.com/user-attachments/assets/6d223533-2d6a-4000-a829-99d00ee01245" />
 
 Installation
